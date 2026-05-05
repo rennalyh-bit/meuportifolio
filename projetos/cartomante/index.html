@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Suzan Cartomante</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: radial-gradient(circle, #0d0d0d, #000);
+  color: #f5e6c8;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(90deg, #2c003e, #000);
+  border-bottom: 2px solid gold;
+}
+
+header h1 {
+  color: gold;
+  font-size: 32px;
+}
+
+/* MENU */
+nav {
+  text-align: center;
+  padding: 10px;
+  background: #111;
+}
+
+nav a {
+  color: gold;
+  margin: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+/* SEÇÕES */
+section {
+  padding: 30px;
+  text-align: center;
+}
+
+/* CARDS */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid gold;
+  border-radius: 15px;
+  padding: 20px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255,215,0,0.2);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px gold;
+}
+
+.card h3 {
+  color: gold;
+}
+
+.preco {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* FORM */
+form {
+  max-width: 300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background: gold;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: purple;
+  color: white;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid gold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🔮 Suzan Cartomante</h1>
+  <p>Conectando você ao seu destino</p>
+</header>
+
+<nav>
+  <a href="#trabalhos">Trabalhos</a>
+  <a href="#consulta">Consulta</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="trabalhos">
+  <h2>Trabalhos Espirituais</h2>
+
+  <div class="produtos">
+    <div class="card"><h3>Amoroso</h3><p class="preco">R$ 100</p></div>
+    <div class="card"><h3>Energético</h3><p class="preco">R$ 50</p></div>
+    <div class="card"><h3>Limpeza espiritual</h3><p class="preco">R$ 70</p></div>
+    <div class="card"><h3>Tiragem simples</h3><p class="preco">R$ 6</p></div>
+    <div class="card"><h3>Tiragem completa</h3><p class="preco">R$ 60</p></div>
+  </div>
+</section>
+
+<section id="consulta">
+  <h2>Solicite sua consulta</h2>
+
+  <form onsubmit="solicitarConsulta(event)">
+    <input type="text" placeholder="Seu nome" required>
+    <input type="number" placeholder="Contato" required>
+
+    <select required>
+      <option value="">Escolha</option>
+      <option>Amoroso</option>
+      <option>Energético</option>
+      <option>Limpeza</option>
+      <option>Tiragem simples</option>
+      <option>Tiragem completa</option>
+    </select>
+
+    <button>Solicitar</button>
+  </form>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>Belo Horizonte, MG</p>
+</section>
+
+<footer>
+  <p>© 2024 Suzan Cartomante</p>
+</footer>
+
+<script>
+function solicitarConsulta(event) {
+  event.preventDefault();
+  alert("Consulta enviada com sucesso 🔮");
+}
+</script>
+
+</body>
+</html>

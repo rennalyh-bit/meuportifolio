@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio - Francisca Rennaly de Sousa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Francisca Rennaly de Sousa</h1>
+  <p>Desenvolvedora em formação 🚀</p>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#projetos">Projetos</a>
+  <a href="#habilidades">Habilidades</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<main>
+
+<section id="sobre">
+  <h2>Sobre mim</h2>
+  <p>
+    Estou aprendendo programação com foco em HTML, CSS e JavaScript.
+    Desenvolvo projetos práticos para evoluir minhas habilidades.
+  </p>
+</section>
+
+<section id="projetos">
+  <h2>Projetos</h2>
+
+  <div class="grid">
+
+    <article class="card">
+      <h3>Site de Sorveteria</h3>
+      <p>Projeto com layout completo, formulário e JavaScript.</p>
+      <a href="projetos/sorveteria/index.html" target="_blank">
+        <button>Ver Projeto</button>
+      </a>
+    </article>
+
+    <article class="card">
+      <h3>Site Cartomante</h3>
+      <p>Site com cards, formulário e organização de conteúdo.</p>
+      <a href="projetos/cartomante/index.html" target="_blank">
+        <button>Ver Projeto</button>
+      </a>
+    </article>
+
+  </div>
+</section>
+
+<section id="habilidades">
+  <h2>Habilidades</h2>
+  <ul>
+    <li>HTML5</li>
+    <li>CSS3</li>
+    <li>JavaScript (básico)</li>
+  </ul>
+</section>
+
+<aside>
+  <h3>Sobre meu aprendizado</h3>
+  <p>Aprendo rápido, gosto de desafios e estou evoluindo diariamente na programação.</p>
+</aside>
+
+<section id="contato">
+  <h2>Contato</h2>
+
+  <form onsubmit="enviarContato(event)">
+    <input type="text" placeholder="Seu nome" required>
+    <input type="email" placeholder="Seu email" required>
+    <input type="text" placeholder="Assunto" required>
+    <button>Enviar</button>
+  </form>
+
+</section>
+
+</main>
+
+<footer>
+  <p>Desenvolvido por Francisca Rennaly de Sousa</p>
+ <p>© 2026</p>
+ <p>email: rennalyh@gmail.com</p>
+ <p>whatsapp: (88) 99930-4941</p>
+</footer>
+
+<script>
+function enviarContato(event) {
+  event.preventDefault();
+  alert("Mensagem enviada! 🚀");
+}
+</script>
+
+</body>
+</html>

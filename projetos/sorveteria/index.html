@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Gelateria Alaska</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #7c7eff;
+}
+
+header {
+  background: linear-gradient(90deg, rgb(54, 174, 255), rgb(0, 0, 73));
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  background: #222;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 20px;
+}
+
+.produtos {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.preco {
+  color: purple;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 10px;
+}
+
+input, button, select {
+  padding: 10px;
+}
+
+button {
+  background: purple;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: blue;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🍦 Gelateria Alaska</h1>
+  <p>Aqui é lugar de gelar o coração ❤️</p>
+</header>
+
+<nav>
+  <a href="#sabores">Sabores</a>
+  <a href="#pedido">Pedido</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="sabores">
+  <h2>Sabores</h2>
+
+  <div class="produtos">
+    <div class="card"><h3>Chocolate</h3><p class="preco">R$ 5,00</p></div>
+    <div class="card"><h3>Morango</h3><p class="preco">R$ 5,00</p></div>
+    <div class="card"><h3>Baunilha</h3><p class="preco">R$ 5,00</p></div>
+    <div class="card"><h3>Cascão</h3><p class="preco">R$ 8,00</p></div>
+  </div>
+</section>
+
+<section id="pedido">
+  <h2>Faça seu pedido</h2>
+
+  <form onsubmit="enviarPedido(event)">
+    <input type="text" placeholder="Seu nome" required>
+    <input type="email" placeholder="Seu email" required>
+
+    <select required>
+      <option value="">Escolha um sabor</option>
+      <option>Chocolate</option>
+      <option>Morango</option>
+      <option>Baunilha</option>
+    </select>
+
+    <button>Enviar Pedido</button>
+  </form>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <p>📍 Pedra Branca - CE</p>
+</section>
+
+<footer>
+  <p>© 2026 Gelateria Alaska</p>
+</footer>
+
+<script>
+function enviarPedido(event) {
+  event.preventDefault();
+  alert("Pedido enviado com sucesso! 🍦");
+}
+</script>
+
+</body>
+</html>
