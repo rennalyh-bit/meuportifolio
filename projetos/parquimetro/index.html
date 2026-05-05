@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Parquímetro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="maquina">
+
+  <div class="display">
+    <h2>🅿️ PARQUÍMETRO</h2>
+    <p id="displayMsg">Insira o valor</p>
+  </div>
+
+  <div class="tabela">
+    <p>💰 Tabela:</p>
+    <p>R$1,00 = 30min</p>
+    <p>R$1,75 = 60min</p>
+    <p>R$3,00 = 120min (máx)</p>
+  </div>
+
+  <input type="number" id="valor" placeholder="Digite o valor">
+
+  <div class="botoes">
+    <button id="btnCalcular">CONFIRMAR</button>
+    <button id="btnReset">RESET</button>
+  </div>
+
+  <div class="saida">
+    <p id="tempo"></p>
+    <p id="troco"></p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

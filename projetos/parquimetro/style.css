@@ -1,0 +1,156 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #1a0022, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #b266ff;
+}
+
+
+.maquina {
+  width: 500px;
+  padding: 50px;
+  border-radius: 25px;
+
+
+  backdrop-filter: blur(25px);
+  background: rgba(178, 102, 255, 0.05);
+  border: 1px solid rgba(178, 102, 255, 0.3);
+
+  box-shadow:
+    0 0 -3px rgba(178,102,255,0.4),
+    inset 0 0 15px rgba(178,102,255,0.1);
+
+  position: relative;
+}
+
+
+.display {
+  background: linear-gradient(10000deg, #050005, #000);
+  border: 5px solid #b164ff;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+
+  box-shadow:
+    inset 0 0 10px #b266ff,
+    0 0 5px rgba(178,102,255,0.5);
+}
+
+.display h2 {
+  font-size: 20px;
+  color: #b266ff;
+  letter-spacing: 2px;
+}
+
+#displayMsg {
+  margin-top: 10px;
+  margin-block-end: auto;
+  font-size: 20px;
+  color: #d9b3ff;
+}
+
+/* TABELA */
+.tabela {
+  margin-top: 30px;
+  font-size: 25px;
+  color: #cfa6ff;
+  opacity: 0.9;
+  line-height: 1.8;
+}
+
+
+input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 25px;
+  border-radius: 200px;
+  border: none;
+  outline: none;
+
+  background: rgba(0,0,0,0.8);
+  color: #b266ff;
+  text-align: center;
+  font-size: 30px;
+
+  box-shadow: inset 0 0 12px rgba(178,102,255,0.3);
+}
+
+/* BOTÕES */
+.botoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(145deg, #b266ff, #6a00cc);
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.5),
+    0 0 10px rgba(178,102,255,0.5);
+
+  transition: all 0.25s ease;
+}
+
+/* EFEITO DO BOTÃO  */
+button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow:
+    0 6px 20px rgba(178,102,255,0.8),
+    0 0 20px #b266ff;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* SAÍDA */
+.saida {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#tempo {
+  font-size: 20px;
+  color: #d9b3ff;
+}
+
+#troco {
+  font-size: 600x;
+  color: #b266ff;
+}
+
+/* EFEITO BRILHO  */
+.maquina::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -6px;
+  width: 50%;
+  height: 50%;
+  border-radius: 100px;
+
+  background: linear-gradient(450deg, transparent, rgba(178,102,255,0.3), transparent);
+  z-index: -1;
+  filter: blur(100px);
+}
