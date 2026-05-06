@@ -1,0 +1,59 @@
+body {
+  --dot-bg: rgb(0, 0, 0);
+  --dot-color: rgb(255, 255, 255);
+  --dot-size: 1px;
+  --dot-space: 22px;
+	background:
+		linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+		var(--dot-color);
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+}
+.container {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  position: ce;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 60px;
+}
+
+button {
+  padding: 10px;
+  background: #322fff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #000000;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-top: 10px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
